@@ -1180,7 +1180,7 @@ select:focus {
 
 .company {
   padding-top: 0.5rem;
-  border-right: 0.5 solid hsla(0, 0%, 69%, 0.301);
+  border-right: 0.5px solid hsla(0, 0%, 69%, 0.4);
 }
 
 .company-h {
@@ -1230,6 +1230,14 @@ select:focus {
 .copyright {
   font-family: var(--font-indie);
   font-size: 1.2rem;
+}
+
+.myaccount {
+  border-right: 0.5px solid hsla(0, 0%, 69%, 0.4);
+}
+
+.oursite {
+  border-right: 0.5px solid hsla(0, 0%, 69%, 0.4);
 }
 
 /* !_________________ FOOTER END _______________________*/

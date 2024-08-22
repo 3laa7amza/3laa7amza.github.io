@@ -1180,7 +1180,7 @@ select:focus {
 
 .company {
   padding-top: 1.5rem;
-  border-right: 1rem solid gray;
+  border-right: 1rem solid #808080;
 }
 
 .company-h {

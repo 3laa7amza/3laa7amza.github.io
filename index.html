@@ -1,90 +1,198 @@
-	<!DOCTYPE html>
-	<html lang="en">
-		<head>
-			<!-- Required meta tags -->
-			<meta charset="utf-8" />
-			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-			<title>FINE DINE</title>
-			<link rel="stylesheet" href="css/bootstrap.min.css">
-			<link rel="stylesheet" href="css/all.min.css">
-			<link rel="stylesheet" href="style.css">
-			<link rel="preconnect" href="https://fonts.googleapis.com">
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-			<link rel="preconnect" href="https://fonts.googleapis.com">
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-			<link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Noto+Kufi+Arabic:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-			<!-- Latest compiled and minified CSS -->
-			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-			<!-- Latest compiled JavaScript -->
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-		</head>
-		<body>
-			<!-- ! NAVBAR START -------------------------------->
-		<nav class="navbar navbar-expand-lg">
-				<div class="container">
-					<a class="navbar-brand" href="#">
-					<img class="logo" src="images/logo/logo.png" alt="logo" width="250">
-					</a>
-				<!-- BURGUR MENU STRAT -->
-					<button
-					class="navbar-toggler"
-					type="button"
-					data-toggle="collapse"
-					data-target="#main"
-					aria-controls="main"
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<title>FINE DINE</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/all.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Indie+Flower&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Noto+Kufi+Arabic:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+		<!--!---------- ! MDB ---------------->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" integrity="sha512-ZKfM1qLFiJLgCvofeUynr29hrH/sibnrInRxJp/tW7neQzbrp1Ak53JJUxBKtAX9UreCiJ43aOveZyfQXYt92g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.dark.min.css" integrity="sha512-dkiuOwQVYPmwcapY2nE2Wu56kM0DipMoF9uMRjFm1ufMRCUBdi7xIL/rdUbsncoZB6zNq63J3gMw+wgzgWrPiA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.dark.rtl.min.css" integrity="sha512-43hCcuLwLdEHOXnzu9TQs41loiGyw4mII4qm6F+rgA1hMwkZMvZ/hhSlCEPS7S6dnCA0ZYX512gC1wC6Qei+ww==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.rtl.min.css" integrity="sha512-nCfdR2EW/gyEZezb8XCXH9vybKfhwE9Mu3OAhLXXEcVOs6bB0vVHsuxe/X/S4BXgk1LhatmiyGwqfdDN+BqMiA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Latest compiled and minified CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Latest compiled JavaScript -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	</head>
+	<body>
+		<!-- ! NAVBAR START -------------------------------->
+		 <div class="outofbox">
+			<h3 class="site-name mt-3">FINE DINE</h3>
+		 </div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+			<!-- Container wrapper -->
+			<div class="container-fluid">
+				<!-- Toggle button -->
+				<button
+				data-mdb-collapse-init
+				class="navbar-toggler"
+				type="button"
+				data-mdb-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+				>
+				<i class="fas fa-bars"></i>
+				</button>
+		
+				<!-- Collapsible wrapper -->
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<!-- Navbar brand -->
+				<a class="navbar-brand mt-2 mt-lg-0" href="#">
+					<img class="site-logo"
+					src="images/logo/logo.png"
+					width="150"
+					height="100"
+					alt="FN Logo"
+					loading="lazy"
+					/>
+				</a>
+		
+				<!-- Left links -->
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link px-3 fs-4" href="#">HOME</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-3 fs-4" href="#">FOODS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-3 fs-4" href="#">DRINKS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-3 fs-4" href="#">BLOG</a>
+					</li>
+				</ul>
+				<!-- Left links -->
+			</div>
+			<!-- Collapsible wrapper -->
+		
+			<!-- Right elements -->
+			<div class="d-flex align-items-center">
+				<!-- Icon -->
+				<a class="text-reset me-3" href="#">
+				<i class="fas fa-shopping-cart"></i>
+				</a>
+		
+				<!-- Notifications -->
+				<div class="dropdown me-3">
+				<a
+					data-mdb-dropdown-init
+					class="text-reset me-3 dropdown-toggle hidden-arrow"
+					href="#"
+					id="navbarDropdownMenuLink"
+					role="button"
 					aria-expanded="false"
-					aria-label="Toggle navigation">
-					<i class="fa-solid fa-bars fs-4"></i>
-					</button>
-				<!-- BURGUR MENU END -->
-				<div class="collapse navbar-collapse" id="main">
-					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-						<li class="nav-item active">
-							<a class="nav-link fs-3 p-lg-3" href="#">HOME</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fs-3 p-lg-3" href="#">FOODS</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fs-3 p-lg-3" href="#">DRINKS</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fs-3 p-lg-3" href="#">BLOG</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fs-3 p-lg-3" href="#">CART</a>
-						</li>
-					</ul>
-					<div class="search">
-						<i class="fa-solid fa-magnifying-glass ps-3 pe-3 d-none d-lg-block"></i>
-					</div>
-					<a class="btn btn-primary rounded-pill main-btn" href="#">LOG IN</a>
+				>
+					<i class="fas fa-bell"></i>
+					<span class="badge rounded-pill badge-notification bg-danger">2</span>
+				</a>
+				<ul
+					class="dropdown-menu dropdown-menu-end"
+					aria-labelledby="navbarDropdownMenuLink"
+				>
+					<li>
+					<a class="dropdown-item" href="#">Notifications 1</a>
+					</li>
+					<li>
+					<a class="dropdown-item" href="#">Notifications 2</a>
+					</li>
+					<li>
+					<a class="dropdown-item" href="#">Notifications 3</a>
+					</li>
+				</ul>
 				</div>
+				<!-- Avatar -->
+				<div class="dropdown me-3">
+				<a
+					data-mdb-dropdown-init
+					class="dropdown-toggle d-flex align-items-center hidden-arrow"
+					href="#"
+					id="navbarDropdownMenuAvatar"
+					role="button"
+					aria-expanded="false"
+				>
+					<img
+					src="images/people/1.png"
+					class="rounded-circle"
+					height="30"
+					alt="Black and White Portrait of a Man"
+					loading="lazy"
+					/>
+				</a>
+				<ul
+					class="dropdown-menu dropdown-menu-end"
+					aria-labelledby="navbarDropdownMenuAvatar"
+				>
+					<li>
+					<a class="dropdown-item" href="#">My profile</a>
+					</li>
+					<li>
+					<a class="dropdown-item" href="#">Settings</a>
+					</li>
+					<li>
+					<a class="dropdown-item" href="#">Logout</a>
+					</li>
+				</ul>
+				</div>
+			</div>
+			<!-- Right elements -->
+			</div>
+			<!-- Container wrapper -->
 		</nav>
-			<!-- ! NAVBAR END -------------------------------->
+		<!-- Navbar -->
+		<!-- ! NAVBAR END -------------------------------->
 
-
-			<!-- ! MAIN START -------------------------------->
+		<!-- ! MAIN START -------------------------------->
 		<main class="main-media">
 			<div class="landing d-flex justify-content-center align-items-center">
 				<div class="text-center-main">
-				<h1 class="land-h">Welcome to our restaurant,</h1>
-				<p class="land-p">Enjoy our delicious recipes and taste every single
-					ingredient.<br />
+					<h1 class="land-h">Welcome to our restaurant,</h1>
+					<p class="land-p">Enjoy our delicious recipes and taste every single ingredient.<br />
 					We serve you happiness.</p>
-				<a class="btn order-now rounded-pill main-btn" href="#">ORDER NOW</a>
+					<a class="btn order-now rounded-pill main-btn" href="#">ORDER NOW</a>
 				</div>
 			</div>
 		</main>
-			<!-- ! MAIN END -------------------------------->
+		<!-- ! MAIN END -------------------------------->
 
 
-			<!-- ! FOODS START ----------------------------->
-		<section class="food-section">
-			<h2 class="subject">FOODS</h2>
-			<div class="food-container">
-				<div class="food-box">
-					<img class="food-img" src="images/foods/food1.jpg" alt="">
+		<!-- ! FOODS START ----------------------------->
+	<section class="food-section">
+		<h2 class="subject">FOODS</h2>
+		<div class="food-container">
+			<div class="food-box bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+				<img class="food-img img-fluid" src="images/foods/food1.jpg" alt="">
+				<a href="#!">
+					<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+				</a>
+				<h4 class="food-title">COOKIES</h4>
+				<p class="food-des">Lorem, ipsum dolor sit.</p>
+				<h6 class="food-price">Price $20</h6>
+				<ul>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star"></i></li>
+				</ul>
+				<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
+			</div>
+				<!-- Add more food items -->
+				<div class="food-box bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+					<img class="food-img img-fluid" src="images/foods/food2.jpg" alt="">
+					<a href="#!">
+						<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+					</a>
 					<h4 class="food-title">COOKIES</h4>
 					<p class="food-des">Lorem, ipsum dolor sit.</p>
 					<h6 class="food-price">Price $20</h6>
@@ -97,510 +205,518 @@
 					</ul>
 					<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
 				</div>
-					<!-- Add more food items -->
-				<div class="food-box">
-					<img class="food-img" src="images/foods/food2.jpg" alt="">
-					<h4 class="food-title">CHICKEN FRIED</h4>
-					<p class="food-des">Lorem, ipsum dolor sit.</p>
-					<h6 class="food-price">Price $20</h6>
-					<ul>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-					</ul>
-					<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
-				</div>
-					<!-- Add more food items -->
-				<div class="food-box">
-					<img class="food-img" src="images/foods/food3.jpg" alt="">
-					<h4 class="food-title">FISH</h4>
-					<p class="food-des">Lorem, ipsum dolor sit.</p>
-					<h6 class="food-price">Price $20</h6>
-					<ul>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star"></i></li>
-						<li><i class="rate fa fa-star"></i></li>
-					</ul>
-					<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
-				</div>
 				<!-- Add more food items -->
-				<div class="food-box">
-					<img class="food-img" src="images/foods/food4.jpg" alt="">
-					<h4 class="food-title">DOUGHS</h4>
-					<p class="food-des">Lorem, ipsum dolor sit.</p>
-					<h6 class="food-price">Price $20</h6>
-					<ul>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star"></i></li>
-					</ul>
-					<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
-				</div>
-				<!-- Add more food items -->
-				<div class="food-box">
-					<img class="food-img" src="images/foods/food5.jpg" alt="">
-					<h4 class="food-title">FINE RECIPE</h4>
-					<p class="food-des">Lorem, ipsum dolor sit.</p>
-					<h6 class="food-price">Price $20</h6>
-					<ul>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-					</ul>
-					<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
-				</div>
-				<!-- Add more food items -->
-				<div class="food-box">
-					<img class="food-img" src="images/foods/food6.jpg" alt="">
-					<h4 class="food-title">SOUPS</h4>
-					<p class="food-des">Lorem, ipsum dolor sit.</p>
-					<h6 class="food-price">Price $20</h6>
-					<ul>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star"></i></li>
-						<li><i class="rate fa fa-star"></i></li>
-					</ul>
-					<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
-				</div>
-				<!-- Add more food items -->
-				<div class="food-box">
-					<img class="food-img" src="images/foods/food7.jpg" alt="">
-					<h4 class="food-title">SALAD</h4>
-					<p class="food-des">Lorem, ipsum dolor sit.</p>
-					<h6 class="food-price">Price $20</h6>
-					<ul>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-					</ul>
-					<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
-				</div>
-				<!-- Add more food items -->
-				<div class="food-box">
-					<img class="food-img" src="images/foods/food8.jpg" alt="">
-					<h4 class="food-title">PIZZA</h4>
-					<p class="food-des">Lorem, ipsum dolor sit.</p>
-					<h6 class="food-price">Price $20</h6>
-					<ul>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star checked"></i></li>
-						<li><i class="rate fa fa-star"></i></li>
-					</ul>
-					<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
-				</div>
-			</div>
-		</section>
-			<!-- ! FOOD END -------------------------------->
-
-
-			<!-- ! DRINK STRAT ----------------------------->
-		<section class="drink-section">
-			<div class="drinks">
-				<h3 class="subject">DRINKS</h3>
-				<section class="media">
-						<div class="box">
-							<div class="image">
-								<img src="images/drinks/drink1.jpg" alt="" />
-								<h2 class="drink-title">SMOOTHIES</h2>
-							</div>
-						</div>
-						<div class="box">
-							<div class="image">
-								<img src="images/drinks/drink3.jpg" alt="" />
-								<h2 class="drink-title">PARTY</h2>
-							</div>
-						</div>
-						<div class="box">
-							<div class="image">
-								<img src="images/drinks/drink4.jpg" alt="" />
-								<h2 class="drink-title">COLD</h2>
-							</div>
-						</div>
-						<div class="box">
-							<div class="image">
-								<img src="images/drinks/drink5.jpg" alt="" />
-								<h2 class="drink-title">HOT</h2>
-							</div>
-						</div>
-						<div class="box">
-							<div class="image">
-								<img src="images/drinks/drink6.jpg" alt="" />
-								<h2 class="drink-title">COFFEE</h2>
-							</div>
-						</div>
-						<div class="box">
-							<div class="image">
-								<img src="images/drinks/drink7.jpg" alt="" />
-								<h2 class="drink-title">MODY</h2>
-							</div>
-						</div>
-						<div class="box">
-							<div class="image">
-								<img src="images/drinks/drink8.jpg" alt="" />
-								<h2 class="drink-title">SPECIAL</h2>
-							</div>
-						</div>
-						<div class="box">
-							<div class="image">
-								<img src="images/drinks/drink2.jpg" alt="" />
-								<h2 class="drink-title">BURN</h2>
-							</div>
-						</div>
-				</section>
-			</div>
-		</section>
-			<!-- ! DRINK END ------------------------------->
-
-
-			<!-- ! NEWSLETTER START ------------------------>
-		<section class="newsletter-section">
-			<div class="newsletter">
-			<div class="news-img">
-				<img class="newsimg" src="images/footer/newsletter2.jpg" alt="Newsletter Image"/>
-			</div>
-			<div class="newstext">
-				<h4 >Sign Up For Newsletters</h4>
-				<p>Get e-Mail updates about our latest shop and special offers.</p>
-				<div class="d-flex justify-content-center">
-					<div class="input-group w-auto">
-							<input
-								type="text"
-								class="form-control"
-								placeholder="Enter your e-mail here"
-								aria-label="e-mail"
-								aria-describedby="sign up"
-							/>
-							<button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary" type="button" id="button-addon1" data-mdb-ripple-color="dark">
-									SIGN UP
-							</button>
-					</div>
-			</div>
-		</div>
-		</section>
-			<!-- ! NEWSLETTER END -------------------------->
-
-
-			<!-- ! BLOG START ------------------------------>
-		<section class="blog-section">
-			<div class="fromblog" id="blg">
-				<h3 class="subject">RESTURANT LOUNGE</h3>
-				<div class="container">
-					<div class="box quality">
-						<div class="image-holder">
-							<img src="images/blog/blog3.jpg" alt="" />
-						</div>
-						<div class="content p-4">
-							<h2>FOODS</h2>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-								Asperiores voluptatem omnis ut, quo soluta vel deserunt excepturi
-								natus voluptatum quaerat repellendus molestias dicta similique
-								odit ipsa, quis dolorem quasi dolor.
-							</p>
-							<button class="more">MORE</button>
-						</div>
-					</div>
-
-					<div class="box passion">
-						<div class="image-holder">
-							<img src="images/blog/blog1.jpg" alt="" />
-						</div>
-						<div class="content p-4">
-							<h2>Special Service</h2>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-								Asperiores voluptatem omnis ut, quo soluta vel deserunt excepturi
-								natus voluptatum quaerat repellendus molestias dicta similique
-								odit ipsa, quis dolorem quasi dolor.
-							</p>
-							<button class="more">MORE</button>
-						</div>
-					</div>
-
-					<div class="box time">
-						<div class="image-holder">
-							<img src="images/blog/blog2.jpg" alt="" />
-						</div>
-						<div class="content p-4">
-							<h2>DRINKS</h2>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-								Asperiores voluptatem omnis ut, quo soluta vel deserunt excepturi
-								natus voluptatum quaerat repellendus molestias dicta similique
-								odit ipsa, quis dolorem quasi dolor.
-							</p>
-							<button class="more">MORE</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-			<!-- ! BLOG END -------------------------------->
-
-
-			<!-- ! REVIEWS START --------------------------->
-		<section class="review-section">
-			<div class="review">
-				<h2 class="subject">REVIEWS</h2>
-				<div class="rev-container">
-					<div class="rev-box">
-						<div class="image-holder">
-							<img src="/images/people/1.png" alt="" />
-							<h3>Bobby Chinn</h3>
-							<span class="title">Chef</span>
-							<div class="rate">
-								<ul>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star"></i></li>
-								</ul>
-							</div>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
-								cumque, corrupti nemo optio nisi enim quo facilis vitae nostrum
-								accusantium esse blanditiis voluptatem, soluta voluptas sed dolore
-								eveniet.
-							</p>
-						</div>
-					</div>
-					<div class="rev-box">
-						<div class="image-holder">
-							<img src="/images/people/2.png" alt="" />
-							<h3>Jamie Oliver</h3>
-							<span class="title">Chef</span>
-							<div class="rate">
-								<ul>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star"></i></li>
-								</ul>
-							</div>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
-								cumque, corrupti nemo optio nisi enim quo facilis vitae nostrum
-								accusantium esse blanditiis voluptatem, soluta voluptas sed dolore
-								eveniet.
-							</p>
-						</div>
-					</div>
-					<div class="rev-box">
-						<div class="image-holder">
-							<img src="/images/people/3.png" alt="" />
-							<h3>Nermine Hanno</h3>
-							<span class="title">Chef</span>
-							<div class="rate">
-								<ul>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star"></i></li>
-								</ul>
-							</div>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
-								cumque, corrupti nemo optio nisi enim quo facilis vitae nostrum
-								accusantium esse blanditiis voluptatem, soluta voluptas sed dolore
-								eveniet.
-							</p>
-						</div>
-					</div>
-					<div class="rev-box">
-						<div class="image-holder">
-							<img src="/images/people/2.png" alt="" />
-							<h3>Jamie Oliver</h3>
-							<span class="title">Chef</span>
-							<div class="rate">
-								<ul>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star checked"></i></li>
-									<li><i class="rate fa fa-star"></i></li>
-									<li><i class="rate fa fa-star"></i></li>
-									<li><i class="rate fa fa-star"></i></li>
-								</ul>
-							</div>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
-								cumque, corrupti nemo optio nisi enim quo facilis vitae nostrum
-								accusantium esse blanditiis voluptatem, soluta voluptas sed dolore
-								eveniet.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="more-rev">
-					<a href="reviews.html">
-						<h3 class="more-txt">See all reviews ...</h3>
+				<div class="food-box bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+					<img class="food-img img-fluid" src="images/foods/food3.jpg" alt="">
+					<a href="#!">
+						<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
 					</a>
+					<h4 class="food-title">COOKIES</h4>
+					<p class="food-des">Lorem, ipsum dolor sit.</p>
+					<h6 class="food-price">Price $20</h6>
+					<ul>
+						<li><i class="rate fa fa-star checked"></i></li>
+						<li><i class="rate fa fa-star checked"></i></li>
+						<li><i class="rate fa fa-star checked"></i></li>
+						<li><i class="rate fa fa-star checked"></i></li>
+						<li><i class="rate fa fa-star"></i></li>
+					</ul>
+					<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
+				</div>
+			<!-- Add more food items -->
+			<div class="food-box bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+				<img class="food-img img-fluid" src="images/foods/food4.jpg" alt="">
+				<a href="#!">
+					<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+				</a>
+				<h4 class="food-title">COOKIES</h4>
+				<p class="food-des">Lorem, ipsum dolor sit.</p>
+				<h6 class="food-price">Price $20</h6>
+				<ul>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star"></i></li>
+				</ul>
+				<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
+			</div>
+			<!-- Add more food items -->
+			<div class="food-box bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+				<img class="food-img img-fluid" src="images/foods/food5.jpg" alt="">
+				<a href="#!">
+					<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+				</a>
+				<h4 class="food-title">COOKIES</h4>
+				<p class="food-des">Lorem, ipsum dolor sit.</p>
+				<h6 class="food-price">Price $20</h6>
+				<ul>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star"></i></li>
+				</ul>
+				<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
+			</div>
+			<!-- Add more food items -->
+			<div class="food-box bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+				<img class="food-img img-fluid" src="images/foods/food6.jpg" alt="">
+				<a href="#!">
+					<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+				</a>
+				<h4 class="food-title">COOKIES</h4>
+				<p class="food-des">Lorem, ipsum dolor sit.</p>
+				<h6 class="food-price">Price $20</h6>
+				<ul>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star"></i></li>
+				</ul>
+				<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
+			</div>
+			<!-- Add more food items -->
+			<div class="food-box bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+				<img class="food-img img-fluid" src="images/foods/food7.jpg" alt="">
+				<a href="#!">
+					<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+				</a>
+				<h4 class="food-title">COOKIES</h4>
+				<p class="food-des">Lorem, ipsum dolor sit.</p>
+				<h6 class="food-price">Price $20</h6>
+				<ul>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star"></i></li>
+				</ul>
+				<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
+			</div>
+			<!-- Add more food items -->
+			<div class="food-box bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+				<img class="food-img img-fluid" src="images/foods/food8.jpg" alt="">
+				<a href="#!">
+					<div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+				</a>
+				<h4 class="food-title">COOKIES</h4>
+				<p class="food-des">Lorem, ipsum dolor sit.</p>
+				<h6 class="food-price">Price $20</h6>
+				<ul>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star checked"></i></li>
+					<li><i class="rate fa fa-star"></i></li>
+				</ul>
+				<button class="buy-btn">BUY NOW <i class="cart fa-sharp fa-solid fa-cart-shopping"></i></button>
+			</div>
+		</div>
+	</section>
+		<!-- ! FOOD END -------------------------------->
+
+
+		<!-- ! DRINK STRAT ----------------------------->
+	<section class="drink-section">
+		<div class="drinks">
+			<h3 class="subject">DRINKS</h3>
+			<section class="media">
+					<div class="box">
+						<div class="image">
+							<img src="images/drinks/drink1.jpg" alt="" />
+							<h2 class="drink-title">SMOOTHIES</h2>
+						</div>
+					</div>
+					<div class="box">
+						<div class="image">
+							<img src="images/drinks/drink3.jpg" alt="" />
+							<h2 class="drink-title">PARTY</h2>
+						</div>
+					</div>
+					<div class="box">
+						<div class="image">
+							<img src="images/drinks/drink4.jpg" alt="" />
+							<h2 class="drink-title">COLD</h2>
+						</div>
+					</div>
+					<div class="box">
+						<div class="image">
+							<img src="images/drinks/drink5.jpg" alt="" />
+							<h2 class="drink-title">HOT</h2>
+						</div>
+					</div>
+					<div class="box">
+						<div class="image">
+							<img src="images/drinks/drink6.jpg" alt="" />
+							<h2 class="drink-title">COFFEE</h2>
+						</div>
+					</div>
+					<div class="box">
+						<div class="image">
+							<img src="images/drinks/drink7.jpg" alt="" />
+							<h2 class="drink-title">MODY</h2>
+						</div>
+					</div>
+					<div class="box">
+						<div class="image">
+							<img src="images/drinks/drink8.jpg" alt="" />
+							<h2 class="drink-title">SPECIAL</h2>
+						</div>
+					</div>
+					<div class="box">
+						<div class="image">
+							<img src="images/drinks/drink2.jpg" alt="" />
+							<h2 class="drink-title">BURN</h2>
+						</div>
+					</div>
+			</section>
+		</div>
+	</section>
+		<!-- ! DRINK END ------------------------------->
+
+
+		<!-- ! NEWSLETTER START ------------------------>
+	<section class="newsletter-section">
+		<div class="newsletter">
+		<div class="news-img">
+			<img class="newsimg" src="images/footer/newsletter2.jpg" alt="Newsletter Image"/>
+		</div>
+		<div class="newstext">
+			<h4 >Sign Up For Newsletters</h4>
+			<p>Get e-Mail updates about our latest shop and special offers.</p>
+			<div class="d-flex justify-content-center">
+				<div class="input-group w-auto">
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Enter your e-mail here"
+							aria-label="e-mail"
+							aria-describedby="sign up"
+						/>
+						<button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary" type="button" id="button-addon1" data-mdb-ripple-color="dark">
+								SIGN UP
+						</button>
+				</div>
+		</div>
+	</div>
+	</section>
+		<!-- ! NEWSLETTER END -------------------------->
+
+
+		<!-- ! BLOG START ------------------------------>
+	<section class="blog-section">
+		<div class="fromblog" id="blg">
+			<h3 class="subject">RESTURANT LOUNGE</h3>
+			<div class="container">
+				<div class="box quality">
+					<div class="image-holder">
+						<img src="images/blog/blog3.jpg" alt="" />
+					</div>
+					<div class="content p-4">
+						<h2>FOODS</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+							Asperiores voluptatem omnis ut, quo soluta vel deserunt excepturi
+							natus voluptatum quaerat repellendus molestias dicta similique
+							odit ipsa, quis dolorem quasi dolor.
+						</p>
+						<button class="more">MORE</button>
+					</div>
+				</div>
+
+				<div class="box passion">
+					<div class="image-holder">
+						<img src="images/blog/blog1.jpg" alt="" />
+					</div>
+					<div class="content p-4">
+						<h2>Special Service</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+							Asperiores voluptatem omnis ut, quo soluta vel deserunt excepturi
+							natus voluptatum quaerat repellendus molestias dicta similique
+							odit ipsa, quis dolorem quasi dolor.
+						</p>
+						<button class="more">MORE</button>
+					</div>
+				</div>
+
+				<div class="box time">
+					<div class="image-holder">
+						<img src="images/blog/blog2.jpg" alt="" />
+					</div>
+					<div class="content p-4">
+						<h2>DRINKS</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+							Asperiores voluptatem omnis ut, quo soluta vel deserunt excepturi
+							natus voluptatum quaerat repellendus molestias dicta similique
+							odit ipsa, quis dolorem quasi dolor.
+						</p>
+						<button class="more">MORE</button>
+					</div>
 				</div>
 			</div>
-		</section>
-			<!-- ! REVIEWS END ----------------------------->
-
-
-			<!-- ! FOOTER START ---------------------------->
-
-	<br>
-	<br
-	<!-- Footer -->
-	<footer class="text-center text-lg-start text-muted">
-		<section class="p-3 border-bottom">
-		<!-- Left -->
-		<div class="me-5 d-none d-lg-block">
-			<span>Get connected with us on social networks:</span>
 		</div>
-		<!-- Left -->
-	<br>
-		<!-- Right -->
-		<div>
-			<a href="" class="me-4">
-			<i class="fab fa-facebook-f"></i>
-			</a>
-			<a href="" class="me-4 text-reset">
-			<i class="fa-brands fa-x-twitter"></i>
-			</a>
-			<a href="" class="me-4">
-			<i class="fab fa-google"></i>
-			</a>
-			<a href="" class="me-4 text-reset">
-			<i class="fab fa-instagram"></i>
-			</a>
-			<a href="" class="me-4 text-reset">
-				<i class="fab fa-linkedin"></i>
-			</a>
-			<a href="" class="me-4 text-reset">
-				<i class="fab fa-github"></i>
-			</a>
-			</div>
-		</section>
-		<!-- Section: Links  -->
-		<section class="footer-container">
-		<div class="container text-center text-md-start mt-5">
-		<!-- Grid row -->
-		<div class="row mt-3">
-			<!-- Grid column -->
-			<div class="company col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-			<!-- Content -->
-				<h6 class="company-h fw-bold mb-4">
-				<img src="images/logo/logo.png" width="100px">
-							<br>
-							FINE DINE
-				</h6>
-				<p class="company-p">
-				Happy to serve you.
-				</p>
-			</div>
-			<!-- Grid column -->
+	</section>
+		<!-- ! BLOG END -------------------------------->
 
-			<!-- Grid column -->
-			<div class="oursite col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-			<!-- Links -->
-				<h6 class="text-uppercase fw-bold mb-4">
-				Our Site
-			</h6>
-			<p>
-				<a href="#!" class="site text-reset">Home</a>
-			</p>
-			<p>
-				<a href="#!" class="site text-reset">Foods</a>
-			</p>
-			<p>
-				<a href="#!" class="site text-reset">Drinks</a>
-			</p>
-			<p>
-				<a href="#!" class="site text-reset">Cart</a>
-			</p>
-			</div>
-			<!-- Grid column -->
 
-			<!-- Grid column -->
-			<div class="myaccount col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-			<!-- Links -->
-			<h6 class="fw-bold mb-4">
-				MY ACCOUNT
-			</h6>
-			<p>
-				<a href="#!" class="site text-reset">Sign In</a>
-			</p>
-			<p>
-				<a href="#!" class="site text-reset">View Cart</a>
-			</p>
-			<p>
-				<a href="#!" class="site text-reset">Track your order</a>
-			</p>
-			<p>
-				<a href="#!" class="site text-reset">Help</a>
-			</p>
+		<!-- ! REVIEWS START --------------------------->
+	<section class="review-section">
+		<div class="review">
+			<h2 class="subject">REVIEWS</h2>
+			<div class="rev-container">
+				<div class="rev-box">
+					<div class="image-holder">
+						<img src="/images/people/1.png" alt="" />
+						<h3>Bobby Chinn</h3>
+						<span class="title">Chef</span>
+						<div class="rate">
+							<ul>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star"></i></li>
+							</ul>
+						</div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
+							cumque, corrupti nemo optio nisi enim quo facilis vitae nostrum
+							accusantium esse blanditiis voluptatem, soluta voluptas sed dolore
+							eveniet.
+						</p>
+					</div>
+				</div>
+				<div class="rev-box">
+					<div class="image-holder">
+						<img src="/images/people/2.png" alt="" />
+						<h3>Jamie Oliver</h3>
+						<span class="title">Chef</span>
+						<div class="rate">
+							<ul>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star"></i></li>
+							</ul>
+						</div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
+							cumque, corrupti nemo optio nisi enim quo facilis vitae nostrum
+							accusantium esse blanditiis voluptatem, soluta voluptas sed dolore
+							eveniet.
+						</p>
+					</div>
+				</div>
+				<div class="rev-box">
+					<div class="image-holder">
+						<img src="/images/people/3.png" alt="" />
+						<h3>Nermine Hanno</h3>
+						<span class="title">Chef</span>
+						<div class="rate">
+							<ul>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star"></i></li>
+							</ul>
+						</div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
+							cumque, corrupti nemo optio nisi enim quo facilis vitae nostrum
+							accusantium esse blanditiis voluptatem, soluta voluptas sed dolore
+							eveniet.
+						</p>
+					</div>
+				</div>
+				<div class="rev-box">
+					<div class="image-holder">
+						<img src="/images/people/2.png" alt="" />
+						<h3>Jamie Oliver</h3>
+						<span class="title">Chef</span>
+						<div class="rate">
+							<ul>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star checked"></i></li>
+								<li><i class="rate fa fa-star"></i></li>
+								<li><i class="rate fa fa-star"></i></li>
+								<li><i class="rate fa fa-star"></i></li>
+							</ul>
+						</div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
+							cumque, corrupti nemo optio nisi enim quo facilis vitae nostrum
+							accusantium esse blanditiis voluptatem, soluta voluptas sed dolore
+							eveniet.
+						</p>
+					</div>
+				</div>
 			</div>
-			<!-- Grid column -->
-
-			<!-- Grid column -->
-			<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-			<!-- Links -->
-			<h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-			<p><i class="fas fa-home me-3"></i>
-							Cairo, CA 12345, EG</p>
-			<p>
-				<i class="fas fa-envelope me-3"></i> <a class="mailto" href="mailto:">info@fine-dine.com</a>
-			</p>
-			<p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-			<p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+			<div class="more-rev">
+				<a href="reviews.html">
+					<h3 class="more-txt">See all reviews ...</h3>
+				</a>
 			</div>
-			<!-- Grid column -->
 		</div>
-		<!-- Grid row -->
+	</section>
+		<!-- ! REVIEWS END ----------------------------->
+
+
+		<!-- ! FOOTER START ---------------------------->
+
+<br>
+<br
+<!-- Footer -->
+<footer class="text-center text-lg-start text-muted">
+	<section class="p-3 border-bottom">
+	<!-- Left -->
+	<div class="me-5 d-none d-lg-block">
+		<span>Get connected with us on social networks:</span>
+	</div>
+	<!-- Left -->
+<br>
+	<!-- Right -->
+	<div>
+		<a href="" class="me-4">
+		<i class="fab fa-facebook-f"></i>
+		</a>
+		<a href="" class="me-4 text-reset">
+		<i class="fa-brands fa-x-twitter"></i>
+		</a>
+		<a href="" class="me-4">
+		<i class="fab fa-google"></i>
+		</a>
+		<a href="" class="me-4 text-reset">
+		<i class="fab fa-instagram"></i>
+		</a>
+		<a href="" class="me-4 text-reset">
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a href="" class="me-4 text-reset">
+			<i class="fab fa-github"></i>
+		</a>
 		</div>
 	</section>
 	<!-- Section: Links  -->
+	<section class="footer-container">
+	<div class="container text-center text-md-start mt-5">
+	<!-- Grid row -->
+	<div class="row mt-3">
+		<!-- Grid column -->
+		<div class="company col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+		<!-- Content -->
+			<h6 class="company-h fw-bold mb-4">
+			<img src="images/logo/logo.png" width="100px">
+			<br>
+				FINE DINE
+			</h6>
+			<p class="company-p">
+			Happy to serve you.
+			</p>
+		</div>
+		<!-- Grid column -->
 
-	<!-- Copyright -->
-	<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-		© 2024 Copyright
-		<a class="copyright text-reset fw-bold" href="#">Fine-Dine.com</a>
+		<!-- Grid column -->
+		<div class="oursite col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+		<!-- Links -->
+			<h6 class="text-uppercase fw-bold mb-4">
+			Our Site
+		</h6>
+		<p>
+			<a href="#!" class="site text-reset">Home</a>
+		</p>
+		<p>
+			<a href="#!" class="site text-reset">Foods</a>
+		</p>
+		<p>
+			<a href="#!" class="site text-reset">Drinks</a>
+		</p>
+		<p>
+			<a href="#!" class="site text-reset">Cart</a>
+		</p>
+		</div>
+		<!-- Grid column -->
+
+		<!-- Grid column -->
+		<div class="myaccount col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+		<!-- Links -->
+		<h6 class="fw-bold mb-4">
+			MY ACCOUNT
+		</h6>
+		<p>
+			<a href="#!" class="site text-reset">Sign In</a>
+		</p>
+		<p>
+			<a href="#!" class="site text-reset">View Cart</a>
+		</p>
+		<p>
+			<a href="#!" class="site text-reset">Track your order</a>
+		</p>
+		<p>
+			<a href="#!" class="site text-reset">Help</a>
+		</p>
+		</div>
+		<!-- Grid column -->
+
+		<!-- Grid column -->
+		<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+		<!-- Links -->
+		<h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+		<p><i class="fas fa-home me-3"></i>
+						Cairo, CA 12345, EG</p>
+		<p>
+			<i class="fas fa-envelope me-3"></i> <a class="mailto" href="mailto:">info@fine-dine.com</a>
+		</p>
+		<p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+		<p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+		</div>
+		<!-- Grid column -->
 	</div>
-	<!-- Copyright -->
-	</footer>
-	<!-- Footer -->
-			<!-- Optional JavaScript -->
-			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-			<script
-				src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-				integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-				crossorigin="anonymous"
-			></script>
-			<script
-				src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-				integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-				crossorigin="anonymous"
-			></script>
-			<script
-				src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-				integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-				crossorigin="anonymous"
-			></script>
-			<script
-				src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-				integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-				crossorigin="anonymous"
-			></script>
-			<script src="https://kit.fontawesome.com/b284671bcc.js" crossorigin="anonymous"></script>
-		</body>
-	</html>
+	<!-- Grid row -->
+	</div>
+</section>
+<!-- Section: Links  -->
+
+<!-- Copyright -->
+<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+	© 2024 Copyright
+	<a class="copyright text-reset fw-bold" href="#">Fine-Dine.com</a>
+</div>
+<!-- Copyright -->
+</footer>
+<!-- Footer -->
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://kit.fontawesome.com/b284671bcc.js" crossorigin="anonymous"></script>
+		<script src="main.js"></script>
+
+		<!--!---------- MDB ------------>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.es.min.js" integrity="sha512-BeqBR1tSs66TKfRbufAK3jbKyG2ysd45VAiL+/2QFMEhlJ6JAvzvl6RVTiUh2yi/cVseSrGOgc+QvIUbTubDFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js" integrity="sha512-orRaGPJ0tGeCLCvCIFl91votpjee7YknHTJ3/gew4zzp0EhqkPwYc6DXABjX9rWjOzbFEPi3g5QRecU3whJvkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</body>
+</html>

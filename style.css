@@ -1180,7 +1180,7 @@ select:focus {
 
 .company {
   padding-top: 0.5rem;
-  border-right: 0.5 solid #hsla(0, 0%, 69%, 0.301);
+  border-right: 0.5 solid hsla(0, 0%, 69%, 0.301);
 }
 
 .company-h {

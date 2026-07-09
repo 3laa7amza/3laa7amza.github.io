@@ -1,0 +1,499 @@
+<!doctype html>
+<html :lang="lang" :dir="lang === 'ar' ? 'rtl' : 'ltr'" class="scroll-smooth" x-data="portfolioState()">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alaaeldin Yahya</title>
+
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.0/css/all.min.css" />
+
+  <!-- Animate.css for entrance animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+    rel="stylesheet" />
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- CSS Stylesheet & Application Context -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body class="bg-[#0b0f19] text-slate-100 antialiased selection:bg-blue-500 selection:text-white overflow-x-hidden">
+  <!-- HEADER / NAVIGATION -->
+  <header
+    class="sticky top-0 z-50 backdrop-blur-md bg-[#0b0f19]/80 border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Branding Logo -->
+      <a href="#"
+        class="text-xl font-bold tracking-tight text-white flex items-center gap-1 transition-transform duration-300 hover:scale-105">
+        <span class="bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">
+          Alaaeldin Yahya
+        </span>
+        <span class="me-1 text-gray-200/20">|</span>
+        <span class="bg-gradient-to-r from-blue-200 to-indigo-400 bg-clip-text text-transparent">
+          Profile
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-400">
+        <a href="#about" class="hover:text-blue-400 relative nav-link transition-colors duration-200">
+          <span x-show="lang === 'en'">About</span>
+          <span x-show="lang === 'ar'" x-cloak>من أنا</span>
+        </a>
+        <a href="#skills" class="hover:text-blue-400 relative nav-link transition-colors duration-200">
+          <span x-show="lang === 'en'">Skills</span>
+          <span x-show="lang === 'ar'" x-cloak>المهارات</span>
+        </a>
+        <a href="#projects" class="hover:text-blue-400 relative nav-link transition-colors duration-200">
+          <span x-show="lang === 'en'">Projects</span>
+          <span x-show="lang === 'ar'" x-cloak>المشاريع</span>
+        </a>
+        <a href="#contact"
+          class="px-3 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-500/40 text-center">
+          <span x-show="lang === 'en'">Hire Me</span>
+          <span x-show="lang === 'ar'" x-cloak>وظفني</span>
+        </a>
+      </nav>
+
+      <!-- Language Switcher & Mobile Trigger -->
+      <div class="flex items-center gap-4">
+        <button @click="toggleLang()"
+          class="px-3 py-1.5 rounded-md bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-bold hover:bg-blue-500/20 hover:scale-105 transition-all cursor-pointer">
+          <i class="fa-solid fa-globe fa-spin me-1"></i>
+          <span x-show="lang === 'en'">العربية</span>
+          <span x-show="lang === 'ar'" x-cloak>English</span>
+        </button>
+
+        <button @click="mobileMenuOpen = !mobileMenuOpen"
+          class="md:hidden text-slate-400 hover:text-white transition-colors">
+          <i class="fa-solid fa-bars text-xl" x-show="!mobileMenuOpen"></i>
+          <i class="fa-solid fa-xmark text-xl" x-show="mobileMenuOpen" x-cloak></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+      x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0"
+      x-transition:leave-end="opacity-0 -translate-y-4" x-cloak
+      class="md:hidden border-b border-slate-800 bg-[#0b0f19] px-4 pt-2 pb-4 space-y-2">
+      <a href="#about" @click="mobileMenuOpen = false"
+        class="block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+        <span x-show="lang === 'en'">About</span><span x-show="lang === 'ar'">من أنا</span>
+      </a>
+      <a href="#skills" @click="mobileMenuOpen = false"
+        class="block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+        <span x-show="lang === 'en'">Skills</span><span x-show="lang === 'ar'">المهارات</span>
+      </a>
+      <a href="#projects" @click="mobileMenuOpen = false"
+        class="block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:bg-slate-800 hover:text-white transition-colors">
+        <span x-show="lang === 'en'">Projects</span><span x-show="lang === 'ar'">المشاريع</span>
+      </a>
+      <a href="#contact" @click="mobileMenuOpen = false"
+        class="block px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-white text-center shadow-md">
+        <span x-show="lang === 'en'">Hire Me</span><span x-show="lang === 'ar'">وظفني</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="about" class="relative min-h-[calc(100vh-10rem)] flex items-center justify-center overflow-hidden">
+    <div class="absolute top-1/4 left-1/4 -z-10 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 -z-10 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl animate-pulse"
+      style="animation-duration: 4s"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate__animated animate__fadeInUp">
+      <!-- Status Badge -->
+      <span
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-6 transition-all duration-300 hover:scale-105">
+        <span class="h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span x-show="lang === 'en'">Available for Opportunities</span>
+        <span x-show="lang === 'ar'" x-cloak>متاح للعمل والفرص الجديدة</span>
+      </span>
+
+      <!-- Main Heading -->
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+        <span x-show="lang === 'en'">Building High-Performance <br class="hidden sm:inline" /><span
+            class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Web
+            Applications</span></span>
+        <span x-show="lang === 'ar'" x-cloak>بناء تطبيقات ويب <br class="hidden sm:inline" /><span
+            class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">عالية
+            الأداء والجودة</span></span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-justify text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        <span x-show="lang === 'en'">
+          Hi, I'm a junior developer specializing in PHP Laravel and creating clean, responsive web applications with
+          fully featured admin dashboards. I'm passionate about building reliable, user-friendly solutions. Let's bring
+          your next idea to life!
+        </span>
+
+        <span x-show="lang === 'ar'" x-cloak>
+          مرحبًا، أنا مطور مبتدئ، متخصص في تطوير تطبيقات الويب باستخدام
+          PHP Laravel،
+          مع التركيز على إنشاء واجهات عملية ومناسبة لجميع الأجهزة والشاشات، ولوحات تحكم إدارية متكاملة. أسعى دائمًا إلى
+          بناء حلول موثوقة وسهلة الاستخدام تلبي احتياجات العملاء بكفاءة. دعنا نحول فكرتك القادمة إلى واقع!
+        </span>
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#projects"
+          class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-500/40 text-center">
+          <span x-show="lang === 'en'">View My Work</span><span x-show="lang === 'ar'" x-cloak>تصفح أعمالي</span>
+        </a>
+
+        <!-- MODAL TRIGGER BUTTON -->
+        <button @click="cvModalOpen = true" type="button"
+          class="w-full sm:w-auto px-8 py-4 bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-medium rounded-xl transition-all duration-300 transform hover:-translate-y-1 text-center cursor-pointer">
+          <span x-show="lang === 'en'">View CV</span><span x-show="lang === 'ar'" x-cloak>عرض السيرة الذاتية</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <hr class="border-slate-900 max-w-7xl mx-auto" />
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-white mb-4">
+        <span x-show="lang === 'en'">Technical Expertise</span><span x-show="lang === 'ar'" x-cloak>الخبرات
+          التقنية</span>
+      </h2>
+      <p class="text-slate-400 max-w-md mx-auto">
+        <span x-show="lang === 'en'">The core technologies I use to build scalable digital assets.</span>
+        <span x-show="lang === 'ar'" x-cloak>الأدوات والتقنيات الأساسية التي أعتمد عليها لبناء مشاريع برمجية
+          متكاملة.</span>
+      </p>
+    </div>
+
+    <div class="swiper skills-swiper !pb-12">
+      <div class="swiper-wrapper">
+        <!-- HTML -->
+        <div class="swiper-slide h-auto">
+          <div
+            class="bg-[#111726] border border-slate-800/60 p-6 rounded-xl text-center hover:border-blue-500/40 transition-all duration-300 group shadow-sm h-full">
+            <div
+              class="h-20 w-20 bg-orange-500/10 text-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4 text-2xl group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-html5 fa-beat-fade icons"></i>
+            </div>
+            <h3 class="text-white font-medium">HTML5</h3>
+            <p class="text-xs text-slate-500 mt-1">
+              <span x-show="lang === 'en'">Semantic & Structure</span>
+              <span x-show="lang === 'ar'" x-cloak>بنية متوافقة ومتجاوبة</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="swiper-slide h-auto">
+          <div
+            class="bg-[#111726] border border-slate-800/60 p-6 rounded-xl text-center hover:border-blue-500/40 transition-all duration-300 group shadow-sm h-full">
+            <div
+              class="h-20 w-20 bg-orange-500/10 text-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4 text-2xl group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-css3-alt fa-jello icons"></i>
+            </div>
+            <h3 class="text-white font-medium">CSS3</h3>
+            <p class="text-xs text-slate-500 mt-1">
+              <span x-show="lang === 'en'">Style & Responsive</span>
+              <span x-show="lang === 'ar'" x-cloak>تصميم بنية متوافقة ومتجاوبة</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Tailwind -->
+        <div class="swiper-slide h-auto">
+          <div
+            class="bg-[#111726] border border-slate-800/60 p-6 rounded-xl text-center hover:border-blue-500/40 transition-all duration-300 group shadow-sm h-full">
+            <div
+              class="h-20 w-20 bg-blue-500/10 text-blue-400 rounded-lg flex items-center justify-center mx-auto mb-4 text-2xl group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-tailwind-css fa-fade icons"></i>
+            </div>
+            <h3 class="text-white font-medium">Tailwind CSS</h3>
+            <p class="text-xs text-slate-500 mt-1">
+              <span x-show="lang === 'en'">Modern Layout Styles</span>
+              <span x-show="lang === 'ar'" x-cloak>تنسيقات عصرية متكاملة</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Bootstrap --->
+        <div class="swiper-slide h-auto">
+          <div
+            class="bg-[#111726] border border-slate-800/60 p-6 rounded-xl text-center hover:border-blue-500/40 transition-all duration-300 group shadow-sm h-full">
+            <div
+              class="h-20 w-20 bg-yellow-500/10 text-yellow-500 rounded-lg flex items-center justify-center mx-auto mb-4 text-2xl group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-bootstrap fa-shake icons"></i>
+            </div>
+            <h3 class="text-white font-medium">Bootstrap CSS</h3>
+            <p class="text-xs text-slate-500 mt-1">
+              <span x-show="lang === 'en'">Modern Layout Styles</span>
+              <span x-show="lang === 'ar'" x-cloak>تنسيقات عصرية متكاملة</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Laravel -->
+        <div class="swiper-slide h-auto">
+          <div
+            class="bg-[#111726] border border-slate-800/60 p-6 rounded-xl text-center hover:border-blue-500/40 transition-all duration-300 group shadow-sm h-full">
+            <div
+              class="h-20 w-20 bg-purple-500/10 text-purple-400 rounded-lg flex items-center justify-center mx-auto mb-4 text-2xl group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-laravel fa-spin-snap icons"></i>
+            </div>
+            <h3 class="text-white font-medium">PHP Laravel</h3>
+            <p class="text-xs text-slate-500 mt-1">
+              <span x-show="lang === 'en'">Full-Stack Development</span>
+              <span x-show="lang === 'ar'" x-cloak>تطوير الواجهات الأمامية والخلفية</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <hr class="border-slate-900 max-w-7xl mx-auto" />
+
+  <!-- PORTFOLIO PROJECTS SECTION -->
+  <section id="projects" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Filter -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div>
+        <h2 class="text-3xl font-bold text-white mb-3">
+          <span x-show="lang === 'en'">Selected Projects</span><span x-show="lang === 'ar'" x-cloak>مشاريع مميزة</span>
+        </h2>
+        <p class="text-slate-400 max-w-md">
+          <span x-show="lang === 'en'">Real-world websites built</span><span x-show="lang === 'ar'" x-cloak>أمثلة على
+            المواقع المصممة</span>
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-2 bg-[#111726] p-1.5 rounded-xl border border-slate-800 self-start">
+        <button @click="activeTab = 'all'"
+          :class="activeTab === 'all' ? 'bg-gradient-to-r from-blue-600 to-indigo-600' : 'text-slate-400 hover:text-white'"
+          class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 cursor-pointer">
+          <span x-show="lang === 'en'">All</span><span x-show="lang === 'ar'" x-cloak>الكل</span>
+        </button>
+
+        <!-- Companies -->
+        <button @click="activeTab = 'companies'"
+          :class="activeTab === 'companies' ? 'bg-gradient-to-r from-blue-600 to-indigo-600' : 'text-slate-400 hover:text-white'"
+          class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 cursor-pointer">
+          <span x-show="lang === 'en'">Companies Works</span><span x-show="lang === 'ar'" x-cloak>أعمال الشركات</span>
+        </button>
+
+        <!-- Personal -->
+        <button @click="activeTab = 'personal'"
+          :class="activeTab === 'personal' ? 'bg-gradient-to-r from-blue-600 to-indigo-600' : 'text-slate-400 hover:text-white'"
+          class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 cursor-pointer">
+          <span x-show="lang === 'en'">Personal Works</span><span x-show="lang === 'ar'" x-cloak>أعمال شخصية</span>
+        </button>
+
+        <!-- Private -->
+        <button @click="activeTab = 'private'"
+          :class="activeTab === 'private' ? 'bg-gradient-to-r from-blue-600 to-indigo-600' : 'text-slate-400 hover:text-white'"
+          class="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 cursor-pointer">
+          <span x-show="lang === 'en'">Private System</span><span x-show="lang === 'ar'" x-cloak>أعمال خاصة بجهة
+            العمل</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Dynamic Projects -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
+      <template x-for="project in projects" :key="project.id">
+        <div x-show="activeTab === 'all' || activeTab === project.category"
+          x-transition:enter="transition ease-out duration-400 transform"
+          x-transition:enter-start="opacity-0 scale-95 translate-y-4"
+          x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+          class="group bg-[#111726] border border-slate-800/80 rounded-2xl overflow-hidden hover:border-blue-500/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1"
+          x-cloak>
+
+          <a :href="project.url" target="_blank" rel="noopener noreferrer">
+            <div>
+              <div
+                class="h-48 bg-gradient-to-br from-slate-800 to-cyan-950 flex items-center justify-center relative overflow-hidden">
+                <img :src="project.imgSource" :alt="project.title[lang]"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+
+              <div class="p-6">
+                <div class="flex justify-between items-center gap-4">
+                  <span class="text-xs font-semibold text-cyan-400 uppercase tracking-wider"
+                    x-text="project.badge[lang]"></span>
+
+                  <div class="flex items-center gap-2 shrink-0">
+                    <span class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
+                        :class="statusConfig[project.status].dot"></span>
+                      <span class="relative inline-flex h-3 w-3 rounded-full"
+                        :class="statusConfig[project.status].dot"></span>
+                    </span>
+                    <span class="text-xs font-semibold" :class="statusConfig[project.status].textClass"
+                      x-text="statusConfig[project.status].text[lang]"></span>
+                  </div>
+                </div>
+
+                <h3 class="text-xl font-bold text-white mt-2 group-hover:text-cyan-400 transition-colors duration-200"
+                  x-text="project.title[lang]"></h3>
+              </div>
+            </div>
+          </a>
+
+          <div class="p-6 pt-0 flex flex-wrap gap-2">
+            <template x-for="tag in project.tags" :key="tag">
+              <span class="text-xs bg-slate-800 px-2.5 py-1 rounded-md text-slate-300" x-text="tag"></span>
+            </template>
+          </div>
+        </div>
+      </template>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-24 bg-[#090d16] border-t border-slate-900/60">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          <span x-show="lang === 'en'">Let's Discuss Your Project</span><span x-show="lang === 'ar'" x-cloak>
+            لنناقش مشروعك القادم
+          </span>
+        </h2>
+        <p class="text-slate-400">
+          <span x-show="lang === 'en'">Need a developer who understands robust database structural designs, clean code,
+            and intuitive front-ends? Drop a line.</span>
+          <span x-show="lang === 'ar'" x-cloak>تبحث عن مطور يتقن بناء قواعد البيانات المتقدمة، كتابة الكود النظيف،
+            وواجهات مستخدم مريحة؟ أرسل تفاصيل مشروعك الآن.</span>
+        </p>
+      </div>
+
+      <!-- Contact Details Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <!-- Email Card -->
+        <a href="mailto:3laa7amza@gmail.com"
+          class="group bg-[#111726] border border-slate-800 p-6 rounded-2xl shadow-xl transition-all duration-300 hover:border-blue-500/40 hover:-translate-y-1 text-center">
+          <div
+            class="h-12 w-12 bg-blue-500/10 text-blue-400 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <h3 class="text-sm font-semibold text-slate-400 mb-1">
+            <span x-show="lang === 'en'">Email Me</span><span x-show="lang === 'ar'" x-cloak>البريد الإلكتروني</span>
+          </h3>
+          <p class="text-white font-medium text-sm break-all">3laa7amza@gmail.com</p>
+        </a>
+
+        <!-- Phone / WhatsApp Card -->
+        <a href="https://wa.me/2011117816352" target="_blank" rel="noopener noreferrer"
+          class="group bg-[#111726] border border-slate-800 p-6 rounded-2xl shadow-xl transition-all duration-300 hover:border-emerald-500/40 hover:-translate-y-1 text-center">
+          <div
+            class="h-12 w-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition-transform">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <h3 class="text-sm font-semibold text-slate-400 mb-1">
+            <span x-show="lang === 'en'">WhatsApp</span><span x-show="lang === 'ar'" x-cloak>واتساب</span>
+          </h3>
+          <p class="text-white font-medium text-sm dir-ltr">+201 111 781 6352</p>
+        </a>
+
+        <!-- Facebook Card -->
+        <a href="https://www.facebook.com/just3laa" target="_blank" rel="noopener noreferrer"
+          class="group bg-[#111726] border border-slate-800 p-6 rounded-2xl shadow-xl transition-all duration-300 hover:border-indigo-500/40 hover:-translate-y-1 text-center">
+          <div
+            class="h-12 w-12 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition-transform">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+          <h3 class="text-sm font-semibold text-slate-400 mb-1">
+            <span x-show="lang === 'en'">Facebook</span><span x-show="lang === 'ar'" x-cloak>فيسبوك</span>
+          </h3>
+          <p class="text-white font-medium text-sm">@just3laa</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0b0f19] border-t border-slate-900 py-8 text-center text-xs text-slate-600">
+    <p>
+      &copy; 2026 Alaaeldin Yahya Portfolio. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- GLOBAL PDF CV MODAL PREVIEW -->
+  <div x-show="cvModalOpen" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-hidden"
+    @keydown.escape.window="cvModalOpen = false" x-cloak>
+
+    <!-- Backdrop Blur overlay wrapper -->
+    <div x-show="cvModalOpen" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click="cvModalOpen = false"
+      class="absolute inset-0 bg-[#060911]/80 backdrop-blur-sm"></div>
+
+    <!-- Modal content container window -->
+    <div x-show="cvModalOpen" x-transition:enter="transition ease-out duration-300 transform"
+      x-transition:enter-start="opacity-0 scale-95 translate-y-4 sm:translate-y-0"
+      x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+      x-transition:leave="transition ease-in duration-200 transform"
+      x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+      x-transition:leave-end="opacity-0 scale-95 translate-y-4 sm:translate-y-0"
+      class="bg-[#111726] border border-slate-800 w-full max-w-5xl h-[85vh] rounded-2xl shadow-2xl relative z-10 flex flex-col overflow-hidden">
+
+      <!-- Modal Header Section Layout -->
+      <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between bg-[#131a2b]">
+        <div class="flex items-center gap-3">
+          <div class="h-10 w-10 bg-blue-500/10 text-blue-400 rounded-lg flex items-center justify-center text-lg">
+            <i class="fa-solid fa-file-pdf"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white">
+              <span x-show="lang === 'en'">Curriculum Vitae</span><span x-show="lang === 'ar'">السيرة الذاتية</span>
+            </h3>
+            <p class="text-xs text-slate-400">Alaaeldin_Yahya_CV.pdf</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <!-- Direct File Download button wrapper linkage context -->
+          <a href="cv/Alaaeldin_Yahya_CV.pdf" download
+            class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold rounded-lg flex items-center gap-2 transition-all duration-200">
+            <i class="fa-solid fa-download"></i>
+            <span x-show="lang === 'en'">Download</span><span x-show="lang === 'ar'">تحميل</span>
+          </a>
+
+          <!-- Close button window trigger asset -->
+          <button @click="cvModalOpen = false"
+            class="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors cursor-pointer">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Interactive PDF Preview Canvas -->
+      <div class="flex-1 bg-[#0b0f19] p-2 sm:p-4">
+        <iframe src="cv/Alaaeldin_Yahya_CV.pdf"
+          class="w-full h-full rounded-lg border border-slate-800/50 bg-[#0b0f19]"></iframe>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
